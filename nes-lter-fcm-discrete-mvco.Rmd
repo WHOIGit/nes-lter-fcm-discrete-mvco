@@ -1,0 +1,202 @@
+---
+title: "NES-LTER Attune flow cytometer discrete mvco sample data package assembly"
+author: "Kate Morkeski"
+date: "2024-06-26"
+output: html_notebook
+---
+
+Libraries used
+
+```{r}
+# two of the required packages are installed from GitHub
+# library(remotes)
+# remotes::install_github("EDIorg/EMLassemblyline")
+# remotes::install_github("WHOIGit/ediutilities")
+
+library(EMLassemblyline)
+library(ediutilities)
+library(here)
+library(lubridate)
+library(dplyr)
+library(readxl)
+library(stringr)
+
+```
+Read MVCO FCM events
+
+```{r}
+mvco_events <- read.csv(here('MVCO_discrete_EDI.csv'))
+
+# Add ship, event_number, event_number_niskin columns and populate
+mvco_events <- mvco_events %>%
+    mutate(event_number = paste(cruise, Event, sep = "_"),
+           niskin_padded = str_pad(niskin, width = 2, pad = "0"),
+           event_number_niskin = paste(cruise, Event, niskin_padded, sep = "_"))
+
+mvco_events <- mvco_events %>%
+    select(event_number, event_number_niskin, everything())
+
+```
+Add Tioga cruise number
+
+```{r}
+
+df <- read_excel('List of MVCO cruises for NES-LTER project.xlsx', sheet = "catalog", skip = 6)
+Tioga_ID <- df %>% select(3, 4, 5)
+
+mvco_events <- left_join(mvco_events, Tioga_ID, by = "event_number")
+
+mvco_events <- mvco_events %>%
+  select(-cruise)  %>%
+  select(-Event)  %>%
+  select(-niskin)  %>%
+  select(-niskin_padded)  %>%
+  relocate(ship, .before = latitude) %>%
+  relocate(cruise_ID, .before = latitude)
+
+mvco_events <- mvco_events %>%
+  rename(cruise = cruise_ID)  
+
+```
+
+# Merge MVCO samples from transect cruises
+
+```{r}
+mvco_transect <- read.csv(here('attune-transect-discrete-samples.csv'))
+
+# Transect MVCO ranges lat =  41.3125 - 41.3269, lon = -70.5629 to -70.5857
+# MVCO_nut_copy ranges lat = 41.1364 - 41.339, lon = -70.4151 to -70.6839
+lat_min <- 41.13
+lat_max <- 41.33
+lon_min <- -70.68
+lon_max <- -70.41
+
+# Filter rows within the specified range of latitude and longitude
+filtered_mvco <- mvco_transect %>%
+  filter(latitude >= lat_min & latitude <= lat_max,
+         longitude >= lon_min & longitude <= lon_max)
+
+# Add ship, event_number, event_number_niskin columns and populate
+filtered_mvco <- filtered_mvco %>%
+  mutate(ship = case_when(
+    grepl("^AR", cruise) ~ "Armstrong",
+    grepl("^AT", cruise) ~ "Atlantis",
+    grepl("^EN", cruise) ~ "Endeavor",
+    grepl("^HRS", cruise) ~ "Sharp",
+    TRUE ~ ""  # Set to empty string for unmatched cases
+      ),
+    event_number = paste(cruise, cast, sep = "_"),
+    niskin_padded = str_pad(niskin, width = 2, pad = "0"),
+    event_number_niskin = paste(cruise, cast, niskin_padded, sep = "_"), 
+  )
+
+filtered_mvco <- filtered_mvco %>%
+  relocate(ship, .before = cruise) %>%
+  relocate(event_number, .before = ship) %>%
+  relocate(event_number_niskin, .before = ship)
+
+# Merge transect mvco data with mvco events
+common_columns <- intersect(names(mvco_events), names(filtered_mvco))
+filtered_mvco_aligned <- filtered_mvco %>% select(all_of(common_columns))
+missing_columns <- setdiff(names(mvco_events), names(filtered_mvco_aligned))
+filtered_mvco_aligned[missing_columns] <- NA
+filtered_mvco_aligned <- filtered_mvco_aligned %>% select(names(mvco_events))
+mvco_updated <- bind_rows(mvco_events, filtered_mvco_aligned)
+
+# Round lat/long
+mvco_updated <- mvco_updated  %>% 
+  mutate(latitude = round(latitude, 4)) %>% 
+  mutate(longitude = round(longitude, 4))
+
+# Round the cells_per_ml columns to 3 decimal places
+mvco_updated <- mvco_updated  %>% 
+  mutate(syn_cells_per_ml = round(syn_cells_per_ml, 3)) %>% 
+  mutate(redeuk_leq_2um_cells_per_ml = round(redeuk_leq_2um_cells_per_ml, 3)) %>% 
+  mutate(redeuk_leq_3um_cells_per_ml = round(redeuk_leq_3um_cells_per_ml, 3)) %>% 
+  mutate(redeuk_leq_5um_cells_per_ml = round(redeuk_leq_5um_cells_per_ml, 3)) %>% 
+  mutate(redeuk_leq_10um_cells_per_ml = round(redeuk_leq_10um_cells_per_ml, 3)) %>% 
+  mutate(redeuk_leq_20um_cells_per_ml = round(redeuk_leq_20um_cells_per_ml, 3)) %>% 
+  mutate(hetprok_cells_per_ml = round(hetprok_cells_per_ml, 3))
+
+```
+
+Create package data file
+
+```{r}
+
+mvco_updated <- mvco_updated %>%
+  mutate(
+    ship = ifelse(is.na(ship), "", ship),
+    cruise = ifelse(is.na(cruise) | cruise == "NA", "", cruise),
+    hetprok_filename = ifelse(is.na(hetprok_filename), "", hetprok_filename),
+  )
+
+# Convert dates read in as character to Date format 
+mvco_updated$date_sampled <- as.POSIXct(mvco_updated$date_sampled, format = "%Y-%m-%d %H:%M:%S")
+mvco_updated$date_processed <- as.POSIXct(mvco_updated$date_processed, format = "%Y-%m-%d")
+
+# ensure rows are in time order
+mvco_updated <- mvco_updated[order(mvco_updated$date_sampled),]
+  
+# write csv file for package
+write.csv(mvco_updated, "nes-lter-fcm-discrete-mvco.csv", na = "NaN", row.names = FALSE)
+
+```
+
+Read the Excel metadata template and generate text templates used by
+EMLassemblyline
+
+```{r}
+excel_to_template(here('nes-lter-fcm-discrete-mvco-info'), 'nes-lter-fcm-discrete-mvco', rights='CCBY', file_type=".md")
+```
+Generate the package and insert the parent project node into the resulting EML
+
+```{r}
+# use designated package ID
+pkg_id <- 'knb-lter-nes.35.1'
+
+# Because EDI has a file upload limit of 500 MB and our tar files are larger,
+# dummy tar files were created in order to run the make_eml.
+# After the make_eml is run, the output EML file was manually
+# edited to enter the actual tar file checksums and file sizes instead of the
+# dummy checksums and file sizes.
+# EDI requires that all (or none) entities be at ‘online’ distribution for evaluation.
+# The eml file was manually edited to include the full online url of the two .csv files,
+# along with their file sizes and checksums.
+
+# WARNING!!! - if the make_eml is rerun, the manually edited checksums and file
+#              sizes in knb-lter-nes.35.x will be overwritten.
+
+make_eml(here(),
+         dataset.title='Abundance, biovolume, and biomass of Synechococcus, eukaryote pico- and nano- phytoplankton, and heterotrophic bacteria from flow cytometry for water column bottle samples on NES-LTER Transect cruises, ongoing since 2018',
+         data.table='nes-lter-fcm-discrete-mvco.csv',
+         data.table.description='Syn, picoeuk, and heterotrophic bacteria cell, biovolume, and biomass concentration from discrete water column samples on NES-LTER cruises',
+         data.table.name = 'nes-lter-fcm-discrete-mvco',
+         temporal.coverage = temporal_coverage(mvco_updated$date_sampled),
+         geographic.description = "NES-LTER Transect",
+         geographic.coordinates = geographic_coordinates(mvco_updated$latitude, mvco_updated$longitude),
+         maintenance.description = "ongoing",
+         user.id = "NES",
+         user.domain = "LTER",
+         other.entity = c("Settings_configuration_history_discrete_analysis.csv",
+                           "EN608_attune_fcs.zip",
+                           "EN644_attune_fcs.zip",
+                           "EN649_attune_fcs.zip",
+                           "EN657_attune_fcs.zip",
+                           "EN661_attune_fcs.zip",
+                           "EN668_attune_fcs.zip",
+                           "AT46_attune_fcs.zip"
+          ),
+          other.entity.description = c("Metadata for instrument settings configuration",
+                                       "raw FCS datafiles from Cruise EN608",
+                                       "raw FCS datafiles from Cruise EN644",
+                                       "raw FCS datafiles from Cruise EN649",
+                                       "raw FCS datafiles from Cruise EN657",
+                                       "raw FCS datafiles from Cruise EN661",
+                                       "raw FCS datafiles from Cruise EN668",
+                                       "raw FCS datafiles from Cruise AT46"
+          ),
+         package.id = pkg_id)
+
+project_insert(edi_pkg = pkg_id, "parent_project_NESI-II_RAPID.txt")
+```

@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="knb-lter-nes.35.1" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="edi">
+  <access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document">
+    <allow>
+      <principal>uid=NES,o=LTER,dc=ecoinformatics,dc=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset>
+    <title>Abundance, biovolume, and biomass of Synechococcus, eukaryote pico- and nano- phytoplankton, and heterotrophic bacteria from flow cytometry for water column bottle samples on NES-LTER Transect cruises, ongoing since 2018</title>
+    <creator>
+      <individualName>
+        <givenName>Emily</givenName>
+        <surName>Peacock</surName>
+      </individualName>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <electronicMailAddress>epeacock@whoi.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0003-0194-7282</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Heidi</givenName>
+        <givenName>M</givenName>
+        <surName>Sosik</surName>
+      </individualName>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <electronicMailAddress>hsosik@whoi.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-4591-2842</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Bethany</givenName>
+        <surName>Stevens</surName>
+      </individualName>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <electronicMailAddress>bstevens@whoi.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0001-8655-7253</userId>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>E.</givenName>
+        <givenName>Taylor</givenName>
+        <surName>Crockford</surName>
+      </individualName>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <electronicMailAddress>ecrockford@whoi.edu</electronicMailAddress>
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-2122-0462</userId>
+    </creator>
+    <associatedParty>
+      <individualName>
+        <givenName>Joe</givenName>
+        <surName>Futrelle</surName>
+      </individualName>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <electronicMailAddress>jfutrelle@whoi.edu</electronicMailAddress>
+      <role>softwareDeveloper</role>
+    </associatedParty>
+    <pubDate>2024-07-02</pubDate>
+    <abstract>
+      <para>These data represent the abundance, biovolume, and biomass of&#13;
+prokaryotic phytoplankton, eukaryotic pico- and nano- phytoplankton, and&#13;
+heterotrophic bacteria from discrete flow cytometry samples collected&#13;
+during the Northeast U.S. Shelf Long-Term Ecological Research (NES-LTER)&#13;
+Transect cruises, ongoing since 2018. Samples were collected and&#13;
+preserved from the water column at multiple depths using Niskin bottles&#13;
+on a CTD rosette system along the NES-LTER transect, and analyzed post&#13;
+cruise. Cells were identified and enumerated from the flow cytometry&#13;
+data files based on their scattering, SYBR (525 nm), phycoerythrin (575&#13;
+nm) and chlorophyll (680 nm) fluorescence signals. Gating was completed&#13;
+manually in the Attune NXT software interface.&#13;
+</para>
+    </abstract>
+    <keywordSet>
+      <keyword>populations</keyword>
+      <keyword>organic matter</keyword>
+      <keywordThesaurus>LTER Core Research Areas</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>phytoplankton</keyword>
+      <keyword>bacteria</keyword>
+      <keyword>abundance</keyword>
+      <keyword>marine</keyword>
+      <keyword>oceanography</keyword>
+      <keyword>bacterial abundance</keyword>
+      <keywordThesaurus>LTER Controlled Vocabulary</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Orange fluorescing prokaryote picophytoplankton</keyword>
+      <keyword>Red only fluorescing eukaryote picophytoplankton</keyword>
+      <keyword>Red only fluorescing eukaryote nanophytoplankton</keyword>
+      <keyword>Heterotrophic prokaryotes with relatively high nucleic acid</keyword>
+      <keyword>Heterotrophic prokaryotes with relatively low nucleic acid</keyword>
+      <keywordThesaurus>Marine Microbial Flow Cytometry Standardised Group Names</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>phytoplankton</keyword>
+      <keywordThesaurus>NODC Data Types Thesaurus</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>biological</keyword>
+      <keyword>plankton</keyword>
+      <keywordThesaurus>NODC Observation Types Thesaurus</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>flow cytometry</keyword>
+      <keywordThesaurus>Global Change Master Directory (GCMD) Instrument Keywords</keywordThesaurus>
+    </keywordSet>
+    <keywordSet>
+      <keyword>Northwest Atlantic Ocean</keyword>
+      <keywordThesaurus>SeaVoX water bodies</keywordThesaurus>
+    </keywordSet>
+    <additionalInfo>
+      <para>This data package includes data collected for other projects with award&#13;
+numbers acknowledged as "related projects" in the metadata: SPIROPA&#13;
+(TN368) and RAPID (EN657). This data package includes data collected on&#13;
+cruises funded by other projects: we'd like to thank Chief Scientist&#13;
+Glen Gawarkiewicz for MIT-WHOI Joint Program (JP) cruise AR38 funded by&#13;
+WHOI Academic Programs Office, and the Ocean Observatories Initiative&#13;
+(OOI) for other cruises on R/V Neil Armstrong funded by the National&#13;
+Science Foundation under Cooperative Agreement No. 1743430.&#13;
+</para>
+    </additionalInfo>
+    <intellectualRights>
+      <para>This information is released under the Creative Commons license - Attribution - CC BY (https://creativecommons.org/licenses/by/4.0/). The consumer of these data ("Data User" herein) is required to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or co-authorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available "as is." The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.
+</para>
+    </intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>NES-LTER Transect</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-70.5845</westBoundingCoordinate>
+          <eastBoundingCoordinate>-70.5632</eastBoundingCoordinate>
+          <northBoundingCoordinate>41.325</northBoundingCoordinate>
+          <southBoundingCoordinate>41.3177</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2015-03-25</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2022-04-26</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <maintenance>
+      <description>ongoing</description>
+    </maintenance>
+    <contact>
+      <organizationName>Northeast U.S. Shelf LTER</organizationName>
+      <positionName>Nes-Lter Information Manager</positionName>
+      <electronicMailAddress>lter-nes-info@whoi.edu</electronicMailAddress>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <markdown># CTD Rosette Bottle Sampling on NES-LTER cruises&#13;
+&#13;
+Samples were collected from the water column at multiple depths using&#13;
+Niskin bottles on a CTD rosette system. A small number of samples were&#13;
+collected from the ship's underway science seawater near the surface.&#13;
+All samples were collected into 2 ml sterile cryovials and stored in a&#13;
+dark container avoiding exposure to sunlight.&#13;
+&#13;
+# Sample preservation&#13;
+&#13;
+Samples were brought into lab and preserved using a 50/50 mix of 25%&#13;
+Glutaraldehyde and 2% Kolliphor P 188, for a final sample concentration&#13;
+of 0.125% Glutaraldehyde and 0.01% Kolliphor. Prior to May of 2019,&#13;
+samples were preserved with only 0.125% Glutaraldehyde. Ten minutes&#13;
+after addition of preservative and gentle mixing, samples were flash&#13;
+frozen in liquid nitrogen where they remained until analysis.&#13;
+&#13;
+#Sample processing&#13;
+&#13;
+Samples were thawed immediately prior to analysis. Each sample was&#13;
+pulled by syringe through a 150-micrometer Nitex mesh pre-filter to&#13;
+avoid aspirating overly large particles that might clog the flow&#13;
+cytometer. For heterotrophic bacterial analysis, 500 microliters were&#13;
+placed in a separate tube with 0.5 ul 500x SYBR stain in DMSO (a 1:20&#13;
+dilution of Invitrogen SYBR Green I Nucleic Acid Gel Stain, 10,000X&#13;
+concentrate in DMSO). The remainder of the sample was placed back in the&#13;
+original tube. Bacterial samples were mixed with a vortex genie and&#13;
+allowed to stain in the dark for at least 10 minutes before analysis.&#13;
+&#13;
+A ThermoFisher Attune NxT Flow Cytometer equipped with two lasers, green&#13;
+(532 nm, 100mW) and blue (488 nm, 50mW) was used for analysis. The flow&#13;
+cytometer focus fluid (sheath) was milli Q water with 3% Sodium chloride&#13;
+(30 ppt) and 0.1% 2-Phenoxyethanol. For quality control, the Attune flow&#13;
+cytometer Performance test (bead REF# 4449754) was run at least once per&#13;
+week and a beads mix (see recipe), was run daily for normalized size&#13;
+calibration. Instrument cleaning was performed at the end of each&#13;
+analysis day using 25% Hellmanex III detergent.&#13;
+&#13;
+Each discrete sample was analyzed with 2-3 different configurations&#13;
+shown in the table Settings_configuration_history_discrete_analysis. The&#13;
+specific fcs file used for quantification of each cell type is listed in&#13;
+the data table. Often multiple cell types were quantified with the same&#13;
+fcs file. FCS files are provided in zipped files organized by cruise.&#13;
+&#13;
+#Instrument configuration and calibration&#13;
+&#13;
+Instrument configuration settings and calibration are provided in the&#13;
+Settings_configuration_history_discrete_analysis file. The table has a&#13;
+row for each run type used for each research cruise, showing relevant&#13;
+instrument settings or major changes in optical filter configuration,&#13;
+bead runs for calibration, cruise sample collection date, and range of&#13;
+analysis dates.&#13;
+&#13;
+Recipe for FCB bead mix:&#13;
+&#13;
+-100ml salt sheath with 0.1% 2 phenoxyethanol&#13;
+&#13;
+-400 ul diluted stock 0.5 um beads Polysciences Inc #19507&#13;
+&#13;
+-5 ul 1 um beads Polysciences Inc #23517&#13;
+&#13;
+-5 drops invitrogen Alignflow plus flow cytometry alignment beads, 6 um&#13;
+#C47397&#13;
+&#13;
+# Data processing&#13;
+&#13;
+Cells were identified and enumerated from the flow cytometry (.fcs) data&#13;
+files based on their scattering, SYBR (525 nm), phycoerythrin (575 nm)&#13;
+and chlorophyll (680 nm) fluorescence signals. Gating was completed&#13;
+manually in the Attune NXT software interface, yielding Attune NXT&#13;
+workspace (.aws) files that were exported and interpreted in matlab for&#13;
+enumeration in the provided data table.&#13;
+&#13;
+The size of each cell was estimated from side-angle light scattering.&#13;
+Side scattering signals were normalized using the side scattering signal&#13;
+of 1-um beads (Flow Check High Intensity Alignment Grade Particles,&#13;
+Polysciences) which were part of the bead mix that was run daily during&#13;
+analysis. Bead-normalized scattering signals were converted to cell&#13;
+volume estimates based on a calibration curve derived from phytoplankton&#13;
+cultures independently sized on a Coulter Multisizer. Finally, cell&#13;
+volume was converted to cell carbon following the relationships&#13;
+described by Menden-Deuer and Lessard (2000). Precision for carbon&#13;
+concentration is provided to two decimal places. Carbon concentration&#13;
+for heterotrophic prokaryotes was estimated from cell concentration and&#13;
+constant carbon per cell ratio of 20fg per cell from Lee and Furham&#13;
+(1987) who report that bacterial biomass is relatively invariant to cell&#13;
+size. The selected term, "Heterotrophic prokaryotes" from the Marine&#13;
+Microbial Flow Cytometry Standardised Group Names, encompasses both&#13;
+bacteria and archaea, and in some cases overlaps with Prochlorococcus.&#13;
+For the purposes of this package, we refer to this group as&#13;
+heterotrophic bacteria.&#13;
+&#13;
+For all sample runs, the first 20 percent of the volume was omitted from&#13;
+analysis and cell quantification to avoid underestimation. The volume&#13;
+analyzed columns account for this adjustment and reflect the true volume&#13;
+analyzed, rather than the total volume run.&#13;
+&#13;
+# Quality control&#13;
+&#13;
+During the manual gating process, if data quality appears poor, gating&#13;
+information (.aws file) is not exported, and data subsequently are not&#13;
+reported. Although this is rare, reasons would be obvious Attune&#13;
+malfunction or lack of preservative. After all manual gates (.aws files)&#13;
+are exported, they are processed with matlab matching them to&#13;
+corresponding .fcs files. In this step, we generated a list of fcs files&#13;
+that did not match to an aws file and ensured the list is as expected.&#13;
+Next, we cross referenced the list of gated samples with our cruise&#13;
+sample log and corrected any mistakes; for example if the log indicates&#13;
+that an alternate niskin was used when that in the filename misfired.&#13;
+The filenames themselves are unchanged during this manual reassignment,&#13;
+so the adjustments are trackable by comparing the filenames to the cast&#13;
+and niskin columns. Finally, we output .pngs of cytograms generated from&#13;
+the matlab processing of fcs and aws files to check for and correct&#13;
+gating errors. At each step, we reprocessed as needed.&#13;
+&#13;
+#Data Package Assembly&#13;
+&#13;
+We add CTD bottle metadata (time, latitude, longitude, depth, potential&#13;
+temperature, salinity) from the REST Application Programming Interface&#13;
+(API) of the NES-LTER data system.&#13;
+&#13;
+Code for data package assembly, including metadata from templates, is&#13;
+available on GitHub&#13;
+(https://github.com/WHOIGit/nes-lter-attune-fcm-discrete-transect).&#13;
+&#13;
+# References&#13;
+&#13;
+Lee, S. &amp; Fuhrman, J. A. (1987) Relationships between biovolume and&#13;
+biomass of naturally derived marine bacterioplankton. Appl Env.&#13;
+Microbiol 53: 1298--1303. Menden-Deuer, S. and Lessard, E.J. (2000)&#13;
+Carbon to volume relationships for dinoflagellates, diatoms, and other&#13;
+protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
+</markdown>
+        </description>
+      </methodStep>
+    </methods>
+    <project>
+      <title>LTER: Scales of Variability in Ecosystem Dynamics and Production on the Changing Northeast U.S. Shelf (NES II)</title>
+      <personnel>
+        <individualName>
+          <givenName>Heidi</givenName>
+          <surName>Sosik</surName>
+        </individualName>
+        <electronicMailAddress>hsosik@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-4591-2842</userId>
+        <role>Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Changsheng</givenName>
+          <surName>Chen</surName>
+        </individualName>
+        <electronicMailAddress>c1chen@umassd.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0001-8715-6101</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Rubao</givenName>
+          <surName>Ji</surName>
+        </individualName>
+        <electronicMailAddress>rji@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-8839-5427</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Joel</givenName>
+          <surName>Llopiz</surName>
+        </individualName>
+        <electronicMailAddress>jllopiz@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-7584-7471</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Susanne</givenName>
+          <surName>Menden-Deuer</surName>
+        </individualName>
+        <electronicMailAddress>smenden@uri.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-8434-4251</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Michael</givenName>
+          <surName>Neubert</surName>
+        </individualName>
+        <electronicMailAddress>mneubert@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0001-8820-5008</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Tatiana</givenName>
+          <surName>Rynearson</surName>
+        </individualName>
+        <electronicMailAddress>rynearson@uri.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0003-2951-0066</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Mei</givenName>
+          <surName>Sato</surName>
+        </individualName>
+        <electronicMailAddress>msato@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-0217-9898</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Rachel</givenName>
+          <surName>Stanley</surName>
+        </individualName>
+        <electronicMailAddress>rstanle2@wellesley.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0003-4860-2476</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Weifeng Gordon</givenName>
+          <surName>Zhang</surName>
+        </individualName>
+        <electronicMailAddress>wzhang@whoi.edu</electronicMailAddress>
+        <userId directory="https://orcid.org">https://orcid.org/0000-0002-2819-1780</userId>
+        <role>Co-Principal Investigator</role>
+      </personnel>
+      <abstract>
+        <para>The Northeast U.S. Shelf (NES) Long-Term Ecological Research (LTER) project integrates observations, experiments, and models to understand and predict how planktonic food webs are changing, and how those changes impact the productivity of higher trophic levels. The NES-LTER is co-located with the Northeast U.S. Continental Shelf Large Marine Ecosystem, spanning the Middle Atlantic Bight and Gulf of Maine. Our focal cross-shelf transect extends about 150 km southward from Martha’s Vineyard, MA, to just beyond the shelf break. Our overarching question is: How is climate change impacting the pelagic NES ecosystem and, in particular, affecting the relationship between compositional (e.g., species diversity and size structure) and aggregate (e.g., rates of primary production, and transfer of energy to important forage fish species) variability?</para>
+      </abstract>
+      <funding>
+        <para>NSF Award OCE-2322676</para>
+      </funding>
+      <relatedProject>
+        <title>LTER: Linking Pelagic Community Structure with Ecosystem Dynamics and Production Regimes on the Changing Northeast US Shelf (NES I)</title>
+        <personnel>
+          <individualName>
+            <givenName>Heidi</givenName>
+            <surName>Sosik</surName>
+          </individualName>
+          <electronicMailAddress>hsosik@whoi.edu</electronicMailAddress>
+          <userId directory="https://orcid.org">https://orcid.org/0000-0002-4591-2842</userId>
+          <role>Principal Investigator</role>
+        </personnel>
+        <funding>NSF Award OCE-1655686</funding>
+      </relatedProject>
+      <relatedProject>
+        <title>RAPID: Collaborative Research: Autumn transition in plankton ecology during an ocean heatwave on the Northeast U.S. Shelf</title>
+        <personnel>
+          <individualName>
+            <givenName>Heidi</givenName>
+            <surName>Sosik</surName>
+          </individualName>
+          <electronicMailAddress>hsosik@whoi.edu</electronicMailAddress>
+          <userId directory="https://orcid.org">0000-0002-4591-2842</userId>
+          <role>Principal Investigator</role>
+        </personnel>
+        <award>
+          <funderName>National Science Foundation</funderName>
+          <awardNumber>NSF Award OCE-210243</awardNumber>
+          <title>RAPID: Collaborative Research: Autumn transition in plankton ecology during an ocean heatwave on the Northeast U.S. Shelf</title>
+        </award>
+      </relatedProject>
+    </project>
+    <dataTable>
+      <entityName>nes-lter-fcm-discrete-mvco</entityName>
+      <entityDescription>Syn, picoeuk, and heterotrophic bacteria cell, biovolume, and biomass concentration from discrete water column samples on NES-LTER cruises</entityDescription>
+      <physical>
+        <objectName>nes-lter-fcm-discrete-mvco.csv</objectName>
+        <size unit="bytes">42943</size>
+        <authentication method="MD5">1bd893cf60e790320b859a86a27178d8</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\r\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>event_number</attributeName>
+          <attributeDefinition>Identification number for each MVCO discrete sampling event</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Identification number for each MVCO discrete sampling event</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>event_number_niskin</attributeName>
+          <attributeDefinition>Identification number for each Niskin or bucket collection during MVCO discrete sampling event</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Identification number for each Niskin or bucket collection during MVCO discrete sampling event</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>ship</attributeName>
+          <attributeDefinition>Name of vessel from which samples were collected</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Name of vessel from which samples were collected</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>cruise</attributeName>
+          <attributeDefinition>identifier for research cruise generally including abbreviation for research vessel and voyage number</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>identifier for research cruise generally including abbreviation for research vessel and voyage number</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>latitude</attributeName>
+          <attributeDefinition>ships latitude in decimal degrees</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">41.3177</minimum>
+                  <maximum exclusive="false">41.325</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>longitude</attributeName>
+          <attributeDefinition>ships longitude in decimal degrees</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>degree</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">-70.5845</minimum>
+                  <maximum exclusive="false">-70.5632</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>depth_m</attributeName>
+          <attributeDefinition>Depth of sample below sea surface; https://vocab.nerc.ac.uk/collection/P09/current/DEPH/</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>meter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">15.859</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>date_sampled</attributeName>
+          <attributeDefinition>date and time in UTC for the sample</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>date_processed</attributeName>
+          <attributeDefinition>date when frozen sample was thawed and run on flow cytometer</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>syn_cells_per_ml</attributeName>
+          <attributeDefinition>abundance per milliliter of Synechococcus (urn:lsid:marinespecies.org:taxname:160572) equivalent to Orange fluorescing prokaryote picophytoplankton https://vocab.nerc.ac.uk/collection/F02/current/F0200003/</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>numberPerMilliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">193265.625</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>syn_biovolume_concentration</attributeName>
+          <attributeDefinition>cubic micrometers per milliliter of seawater of Synechococcus (urn:lsid:marinespecies.org:taxname:160572) equivalent to Orange fluorescing prokaryote picophytoplankton https://vocab.nerc.ac.uk/collection/F02/current/F0200003/</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micrometerCubedPerMilliter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">67395.6906761252</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>syn_carbon_concentration</attributeName>
+          <attributeDefinition>micrograms of carbon per liter of seawater of Synechococcus (urn:lsid:marinespecies.org:taxname:160572) equivalent to Orange fluorescing prokaryote picophytoplankton https://vocab.nerc.ac.uk/collection/F02/current/F0200003/</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>microgramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">15.3812558416745</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>syn_volume_analyzed_ml</attributeName>
+          <attributeDefinition>volume of seawater analyzed in milliliters during the flow cytometry run associated with Syn_filename</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.32</minimum>
+                  <maximum exclusive="false">0.32</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>syn_filename</attributeName>
+          <attributeDefinition>name of original .fcs file used to identify Synechococcus in this sample</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>name of original .fcs file used to identify Synechococcus in this sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_2um_cells_per_ml</attributeName>
+          <attributeDefinition>abundance per milliliter of eukaryote (urn:lsid:algaebase.org:taxname:86701) picophytoplankton cells estimated from scattering signal to be less than 2 um in diameter</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>numberPerMilliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">862.5</minimum>
+                  <maximum exclusive="false">63478.125</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_2um_biovolume_concentration</attributeName>
+          <attributeDefinition>cubic micrometers per milliliter of seawater of eukaryote (urn:lsid:algaebase.org:taxname:86701) picophytoplankton cells estimated from scattering signal to be less than 2 um in diameter</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micrometerCubedPerMilliter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">902.497234548804</minimum>
+                  <maximum exclusive="false">94247.3282300394</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_2um_carbon_concentration</attributeName>
+          <attributeDefinition>micrograms of carbon per liter of seawater of eukaryote (urn:lsid:algaebase.org:taxname:86701) picophytoplankton cells estimated from scattering signal to be less than 2 um in diameter</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>microgramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.190851451721819</minimum>
+                  <maximum exclusive="false">19.6579282126326</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_3um_cells_per_ml</attributeName>
+          <attributeDefinition>abundance per milliliter of eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells estimated from scattering signal to be less than 3 um in diameter including cells counted in previous column</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>numberPerMilliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">1184.375</minimum>
+                  <maximum exclusive="false">70784.375</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_3um_biovolume_concentration</attributeName>
+          <attributeDefinition>cubic micrometers per milliliter of seawater of eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells estimated from scattering signal to be less than 3 um in diameter including cells counted in previous column</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micrometerCubedPerMilliter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">4186.39325661912</minimum>
+                  <maximum exclusive="false">142841.640570979</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_3um_carbon_concentration</attributeName>
+          <attributeDefinition>micrograms of carbon per liter of seawater of eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells estimated from scattering signal to be less than 3 um in diameter including cells counted in previous column</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>microgramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.805927321307884</minimum>
+                  <maximum exclusive="false">28.9878414962262</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_5um_cells_per_ml</attributeName>
+          <attributeDefinition>abundance per milliliter of eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells estimated from scattering signal to be less than 5 um in diameter including cells counted in previous columns</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>numberPerMilliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">1365.625</minimum>
+                  <maximum exclusive="false">73165.625</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_5um_biovolume_concentration</attributeName>
+          <attributeDefinition>cubic micrometers per milliliter of seawater of eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells estimated from scattering signal to be less than 5 um in diameter including cells counted in previous columns</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micrometerCubedPerMilliter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">9314.76164846302</minimum>
+                  <maximum exclusive="false">213635.15328617</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_5um_carbon_concentration</attributeName>
+          <attributeDefinition>micrograms of carbon per liter of seawater of eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells estimated from scattering signal to be less than 5 um in diameter including cells counted in previous columns</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>microgramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">1.70372704461475</minimum>
+                  <maximum exclusive="false">40.937035378151</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_10um_cells_per_ml</attributeName>
+          <attributeDefinition>abundance per milliliter of eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells estimated from scattering signal to be less than 10 um in diameter including cells counted in previous columns</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>numberPerMilliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">1418.75</minimum>
+                  <maximum exclusive="false">73940.625</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_10um_biovolume_concentration</attributeName>
+          <attributeDefinition>cubic micrometers per milliliter of seawater of eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells estimated from scattering signal to be less than 10 um in diameter including cells counted in previous columns</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micrometerCubedPerMilliter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">21494.7234289109</minimum>
+                  <maximum exclusive="false">560312.079895673</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_10um_carbon_concentration</attributeName>
+          <attributeDefinition>micrograms of carbon per liter of seawater of eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells estimated from scattering signal to be less than 10 um in diameter including cells counted in previous columns</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>microgramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">3.56938476010464</minimum>
+                  <maximum exclusive="false">91.5156187524863</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_20um_cells_per_ml</attributeName>
+          <attributeDefinition>abundance per milliliter of all measured eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells less than 20 um in diameter including cells counted in previous columns http://vocab.nerc.ac.uk/collection/F02/current/F0200004/ and http://vocab.nerc.ac.uk/collection/F02/current/F0200005/</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>numberPerMilliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">1903.125</minimum>
+                  <maximum exclusive="false">74090.625</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_20um_biovolume_concentration</attributeName>
+          <attributeDefinition>cubic micrometers per milliliter of seawater of all measured eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells less than 20 um in diameter including cells counted in previous columns http://vocab.nerc.ac.uk/collection/F02/current/F0200004/ and http://vocab.nerc.ac.uk/collection/F02/current/F0200005/</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>micrometerCubedPerMilliter</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">71522.9887899714</minimum>
+                  <maximum exclusive="false">1396691.4765776</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_leq_20um_carbon_concentration</attributeName>
+          <attributeDefinition>micrograms of carbon per liter of seawater of all measured eukaryote (urn:lsid:algaebase.org:taxname:86701) phytoplankton cells less than 20 um in diameter including cells counted in previous columns http://vocab.nerc.ac.uk/collection/F02/current/F0200004/ and http://vocab.nerc.ac.uk/collection/F02/current/F0200005/</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>microgramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">12.908093287208</minimum>
+                  <maximum exclusive="false">195.522547057078</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_volume_analyzed_ml</attributeName>
+          <attributeDefinition>volume of seawater analyzed in milliliters during the flow cytometry run associated with redeuk_filename</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.32</minimum>
+                  <maximum exclusive="false">0.32</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>redeuk_filename</attributeName>
+          <attributeDefinition>name of original .fcs file used to identify red eukaryotes in this sample</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>name of original .fcs file used to identify red eukaryotes in this sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>hetprok_cells_per_ml</attributeName>
+          <attributeDefinition>abundance per milliliter of heterotrophic prokaryotic cells http://vocab.nerc.ac.uk/collection/F02/current/F0200010/ and http://vocab.nerc.ac.uk/collection/F02/current/F0200011/</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>numberPerMilliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">944375</minimum>
+                  <maximum exclusive="false">3924725</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>hetprok_carbon_concentration</attributeName>
+          <attributeDefinition>micrograms of carbon per liter of seawater of heterotrophic prokaryotic cells (http://vocab.nerc.ac.uk/collection/F02/current/F0200010/ and http://vocab.nerc.ac.uk/collection/F02/current/F0200011/) estimated from cell concentration and constant carbon per cell ratio of 20fg per cell from Lee and Furham (1987) who report that bacterial biomass is relatively invariant to cell size</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>microgramsPerLiter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">18.8875</minimum>
+                  <maximum exclusive="false">78.4945</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>hetprok_volume_analyzed_ml</attributeName>
+          <attributeDefinition>volume of seawater analyzed in milliliters during the flow cytometry run associated with hetprok_filename</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <standardUnit>milliliter</standardUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0.06</minimum>
+                  <maximum exclusive="false">0.08</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+          <missingValueCode>
+            <code>NaN</code>
+            <codeExplanation>Missing value</codeExplanation>
+          </missingValueCode>
+        </attribute>
+        <attribute>
+          <attributeName>hetprok_filename</attributeName>
+          <attributeDefinition>name of original .fcs file used to identify heterotrophic prokaryotes in this sample</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>name of original .fcs file used to identify heterotrophic prokaryotes in this sample</definition>
+                </textDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>84</numberOfRecords>
+    </dataTable>
+    <otherEntity>
+      <entityName>Settings_configuration_history_discrete_analysis.csv</entityName>
+      <entityDescription>Metadata for instrument settings configuration</entityDescription>
+      <physical>
+        <objectName>Settings_configuration_history_discrete_analysis.csv</objectName>
+        <size unit="bytes">7965</size>
+        <authentication method="MD5">f351d0049842bb21bd7430148d33cdd6</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>text/csv</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+      </physical>
+      <entityType>unknown</entityType>
+    </otherEntity>
+    <otherEntity>
+      <entityName>EN608_attune_fcs.zip</entityName>
+      <entityDescription>raw FCS datafiles from Cruise EN608</entityDescription>
+      <physical>
+        <objectName>EN608_attune_fcs.zip</objectName>
+        <size unit="bytes">120</size>
+        <authentication method="MD5">e5d118e5406c85f0a945c31045dd2ba5</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/zip</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+      </physical>
+      <entityType>unknown</entityType>
+    </otherEntity>
+    <otherEntity>
+      <entityName>EN644_attune_fcs.zip</entityName>
+      <entityDescription>raw FCS datafiles from Cruise EN644</entityDescription>
+      <physical>
+        <objectName>EN644_attune_fcs.zip</objectName>
+        <size unit="bytes">120</size>
+        <authentication method="MD5">e5d118e5406c85f0a945c31045dd2ba5</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/zip</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+      </physical>
+      <entityType>unknown</entityType>
+    </otherEntity>
+    <otherEntity>
+      <entityName>EN649_attune_fcs.zip</entityName>
+      <entityDescription>raw FCS datafiles from Cruise EN649</entityDescription>
+      <physical>
+        <objectName>EN649_attune_fcs.zip</objectName>
+        <size unit="bytes">120</size>
+        <authentication method="MD5">e5d118e5406c85f0a945c31045dd2ba5</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/zip</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+      </physical>
+      <entityType>unknown</entityType>
+    </otherEntity>
+    <otherEntity>
+      <entityName>EN657_attune_fcs.zip</entityName>
+      <entityDescription>raw FCS datafiles from Cruise EN657</entityDescription>
+      <physical>
+        <objectName>EN657_attune_fcs.zip</objectName>
+        <size unit="bytes">120</size>
+        <authentication method="MD5">e5d118e5406c85f0a945c31045dd2ba5</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/zip</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+      </physical>
+      <entityType>unknown</entityType>
+    </otherEntity>
+    <otherEntity>
+      <entityName>EN661_attune_fcs.zip</entityName>
+      <entityDescription>raw FCS datafiles from Cruise EN661</entityDescription>
+      <physical>
+        <objectName>EN661_attune_fcs.zip</objectName>
+        <size unit="bytes">120</size>
+        <authentication method="MD5">e5d118e5406c85f0a945c31045dd2ba5</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/zip</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+      </physical>
+      <entityType>unknown</entityType>
+    </otherEntity>
+    <otherEntity>
+      <entityName>EN668_attune_fcs.zip</entityName>
+      <entityDescription>raw FCS datafiles from Cruise EN668</entityDescription>
+      <physical>
+        <objectName>EN668_attune_fcs.zip</objectName>
+        <size unit="bytes">120</size>
+        <authentication method="MD5">e5d118e5406c85f0a945c31045dd2ba5</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/zip</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+      </physical>
+      <entityType>unknown</entityType>
+    </otherEntity>
+    <otherEntity>
+      <entityName>AT46_attune_fcs.zip</entityName>
+      <entityDescription>raw FCS datafiles from Cruise AT46</entityDescription>
+      <physical>
+        <objectName>AT46_attune_fcs.zip</objectName>
+        <size unit="bytes">120</size>
+        <authentication method="MD5">e5d118e5406c85f0a945c31045dd2ba5</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/zip</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+      </physical>
+      <entityType>unknown</entityType>
+    </otherEntity>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <unit id="micrometerCubedPerMilliter" multiplierToSI="" name="micrometerCubedPerMilliter" parentSI="" unitType="biovolume">
+          <description>cubic micrometers per milliliter of seawater</description>
+        </unit>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+  <additionalMetadata>
+    <metadata>
+      <emlEditor>
+        <app>EMLassemblyline</app>
+        <release>3.5.5</release>
+      </emlEditor>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>

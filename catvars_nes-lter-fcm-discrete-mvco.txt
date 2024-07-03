@@ -1,0 +1,5 @@
+attributeName	code	definition
+samplelog_QC	1	indicates agreement: the cast and niskin in the filename matches a sample that was recorded as being taken
+samplelog_QC	2	indicates missing data: a sample was marked in the cruise sample log as collected, but no matching .fcs files were found
+samplelog_QC	3	indicates questionable data: an .fcs file exists, but the sample log did not document that a sample was taken from the cast and niskin indicated by the filename. In some of these cases, we have manually identified which sample the .fcs data is most likely to correspond to.
+samplelog_QC	4	indicates unevaluated: the .fcs filename has not yet been compared to the sample log
