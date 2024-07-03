@@ -430,8 +430,8 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
       <entityDescription>Syn, picoeuk, and heterotrophic bacteria cell, biovolume, and biomass concentration from discrete water column samples on NES-LTER cruises</entityDescription>
       <physical>
         <objectName>nes-lter-fcm-discrete-mvco.csv</objectName>
-        <size unit="bytes">42943</size>
-        <authentication method="MD5">1bd893cf60e790320b859a86a27178d8</authentication>
+        <size unit="bytes">42895</size>
+        <authentication method="MD5">167f8bf235c02e29304b31f2da27ff97</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -559,7 +559,7 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">15.859</maximum>
+                  <maximum exclusive="false">15.9</maximum>
                 </bounds>
               </numericDomain>
             </ratio>

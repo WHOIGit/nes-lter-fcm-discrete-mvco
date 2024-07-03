@@ -118,6 +118,10 @@ mvco_updated <- mvco_updated  %>%
   mutate(redeuk_leq_20um_cells_per_ml = round(redeuk_leq_20um_cells_per_ml, 3)) %>% 
   mutate(hetprok_cells_per_ml = round(hetprok_cells_per_ml, 3))
 
+# Round depth to 1 decimal place
+mvco_updated <- mvco_updated  %>% 
+  mutate(depth_m = round(depth_m, 1))
+
 ```
 
 Create package data file
