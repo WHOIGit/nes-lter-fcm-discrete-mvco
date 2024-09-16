@@ -59,7 +59,7 @@
       <electronicMailAddress>jfutrelle@whoi.edu</electronicMailAddress>
       <role>softwareDeveloper</role>
     </associatedParty>
-    <pubDate>2024-07-03</pubDate>
+    <pubDate>2024-09-15</pubDate>
     <abstract>
       <para>These data represent the abundance, biovolume, and biomass of&#13;
 prokaryotic phytoplankton, eukaryotic pico- and nano- phytoplankton, and&#13;
@@ -430,8 +430,8 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
       <entityDescription>Syn, picoeuk, and heterotrophic bacteria cell, biovolume, and biomass concentration from discrete water column samples on NES-LTER cruises</entityDescription>
       <physical>
         <objectName>nes-lter-fcm-discrete-mvco.csv</objectName>
-        <size unit="bytes">42895</size>
-        <authentication method="MD5">167f8bf235c02e29304b31f2da27ff97</authentication>
+        <size unit="bytes">64882</size>
+        <authentication method="MD5">5ccc8f2087664f85d7bcbc0c57ea03a9</authentication>
         <dataFormat>
           <textFormat>
             <numHeaderLines>1</numHeaderLines>
@@ -604,7 +604,7 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">0</minimum>
-                  <maximum exclusive="false">193265.625</maximum>
+                  <maximum exclusive="false">204215.625</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -713,7 +713,7 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">862.5</minimum>
+                  <minimum exclusive="false">859.375</minimum>
                   <maximum exclusive="false">63478.125</maximum>
                 </bounds>
               </numericDomain>
@@ -875,7 +875,7 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
                 <numberType>real</numberType>
                 <bounds>
                   <minimum exclusive="false">9314.76164846302</minimum>
-                  <maximum exclusive="false">213635.15328617</maximum>
+                  <maximum exclusive="false">222817.831882695</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -989,7 +989,7 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">1903.125</minimum>
+                  <minimum exclusive="false">1618.75</minimum>
                   <maximum exclusive="false">74090.625</maximum>
                 </bounds>
               </numericDomain>
@@ -1012,7 +1012,7 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">71522.9887899714</minimum>
+                  <minimum exclusive="false">61572.2989541471</minimum>
                   <maximum exclusive="false">1396691.4765776</maximum>
                 </bounds>
               </numericDomain>
@@ -1035,7 +1035,7 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">12.908093287208</minimum>
+                  <minimum exclusive="false">9.77771415108024</minimum>
                   <maximum exclusive="false">195.522547057078</maximum>
                 </bounds>
               </numericDomain>
@@ -1099,8 +1099,8 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">944375</minimum>
-                  <maximum exclusive="false">3924725</maximum>
+                  <minimum exclusive="false">666500</minimum>
+                  <maximum exclusive="false">4443925</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -1122,8 +1122,8 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
               <numericDomain>
                 <numberType>real</numberType>
                 <bounds>
-                  <minimum exclusive="false">18.8875</minimum>
-                  <maximum exclusive="false">78.4945</maximum>
+                  <minimum exclusive="false">13.33</minimum>
+                  <maximum exclusive="false">88.8785</maximum>
                 </bounds>
               </numericDomain>
             </ratio>
@@ -1171,7 +1171,7 @@ protist plankton. Limnology and Oceanography. 45(3): 569--579.&#13;
           </measurementScale>
         </attribute>
       </attributeList>
-      <numberOfRecords>84</numberOfRecords>
+      <numberOfRecords>127</numberOfRecords>
     </dataTable>
     <otherEntity>
       <entityName>Settings_configuration_history_discrete_analysis.csv</entityName>
