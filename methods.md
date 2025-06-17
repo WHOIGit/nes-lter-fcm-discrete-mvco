@@ -1,10 +1,16 @@
-# CTD Rosette Bottle Sampling on NES-LTER cruises
+# About Martha's Vineyard Coastal Observatory
 
-Samples were collected from the water column at multiple depths using
-Niskin bottles on a CTD rosette system. A small number of samples were
-collected from the ship's underway science seawater near the surface.
-All samples were collected into 2 ml sterile cryovials and stored in a
-dark container avoiding exposure to sunlight.
+The Martha's Vineyard Coastal Observatory (MVCO) Air-Sea Interaction Tower (ASIT) is located at 41.325 N, 70.567 W. See https://mvco.whoi.edu/about/ for more site information. Samples were collected in the vicinity of the tower. Early in the time series, samples were also collected from along- and cross-shore transects nearby. 
+
+Starting in xxxx (could use 2003, or where we have data back to), a monthly water sample has been collected at MVCO. The sample is typically collected using a CTD rosette or bucket during a day trip on a coastal vessel such as the R/V Tioga. Starting in February 2018, 4 of the monthly MVCO water samples per year were collected as part of a larger field sampling campaign during Northeast U.S. Shelf Long-Term Ecological Research project (NES-LTER) quarterly seasonal transect research cruises. 
+
+Transect cruise samples can be differentiated from standard coastal day trips using the event number and event number Niskin parameters because they do not contain 'MVCO', but rather the cruise ID unique to that ship and cruise number. NES-LTER transect cruises always occur on a larger ship than is typical for monthly sample collection, however, the same MVCO time series CTD rosette collection, sampling protocol, and analysis methods have been used. 
+
+
+# CTD Rosette Bottle and Bucket Sampling  
+
+Samples were collected from the water column at multiple depths using Niskin bottles on a CTD rosette system. Some samples were collected at the surface with a bucket. In the event\_number\_niskin field of the data table, MVCO event number or transect cruise identifier is combined with a suffix indicating a bucket sample (_00) or Niskin bottle number (e.g. _01). The depth for bucket samples is 0 m; some surface Niskin samples also have depth recorded as 0 m. 
+
 
 # Sample preservation
 
@@ -15,7 +21,7 @@ samples were preserved with only 0.125% Glutaraldehyde. Ten minutes
 after addition of preservative and gentle mixing, samples were flash
 frozen in liquid nitrogen where they remained until analysis.
 
-#Sample processing
+# Sample processing
 
 Samples were thawed immediately prior to analysis. Each sample was
 pulled by syringe through a 150-micrometer Nitex mesh pre-filter to
@@ -42,7 +48,7 @@ specific fcs file used for quantification of each cell type is listed in
 the data table. Often multiple cell types were quantified with the same
 fcs file. FCS files are provided in zipped files organized by cruise.
 
-#Instrument configuration and calibration
+# Instrument configuration and calibration
 
 Instrument configuration settings and calibration are provided in the
 Settings_configuration_history_discrete_analysis file. The table has a
@@ -51,7 +57,7 @@ instrument settings or major changes in optical filter configuration,
 bead runs for calibration, cruise sample collection date, and range of
 analysis dates.
 
-Recipe for FCB bead mix:
+# Recipe for FCB bead mix:
 
 -100ml salt sheath with 0.1% 2 phenoxyethanol
 
@@ -113,7 +119,7 @@ and niskin columns. Finally, we output .pngs of cytograms generated from
 the matlab processing of fcs and aws files to check for and correct
 gating errors. At each step, we reprocessed as needed.
 
-#Data Package Assembly
+# Data Package Assembly
 
 We add CTD bottle metadata (time, latitude, longitude, depth, potential
 temperature, salinity) from the REST Application Programming Interface
